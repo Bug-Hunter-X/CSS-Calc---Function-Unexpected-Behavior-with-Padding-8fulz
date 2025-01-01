@@ -1,0 +1,10 @@
+The following corrected CSS rule fixes the unexpected behavior:
+
+```css
+div {
+  width: calc(100% - 40px);
+  padding: 10px;
+}
+```
+
+By subtracting `40px` (twice the padding value) from `100%`, the calculation now correctly accounts for the padding, preventing the element from overflowing its container.
