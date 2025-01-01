@@ -1,0 +1,10 @@
+The following CSS rule is causing unexpected behavior:
+
+```css
+div {
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+```
+
+The `calc()` function is used to calculate the width of the div element. The result of the calculation is expected to be 80% of the parent container's width when the padding is considered. However, the padding is added to the width of the element, resulting in a final width greater than 100%. This causes layout issues as the element may overflow its container.
